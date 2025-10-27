@@ -1,0 +1,11 @@
+/* External Style Sheet */
+		
+        h1 {
+            color: red;
+            text-align: center;
+            font-family: 'Georgia', serif;
+		}
+ul li {
+    list-style-type: square;
+}
+
