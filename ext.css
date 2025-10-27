@@ -1,0 +1,10 @@
+/* External Style Sheet */
+
+ body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+ul li {
+    list-style-type: square;
+}
+
