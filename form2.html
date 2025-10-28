@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    h3 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        width: 420px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    label {
+        display: inline-block;
+        width: 150px;
+        margin-bottom: 10px;
+        vertical-align: top;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="mobile"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 220px;
+        padding: 5px;
+    }
+    textarea {
+        height: 60px;
+        resize: none;
+    }
+    .gender-options {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: 220px;
+    }
+    .gender-options label {
+        width: auto;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+<h3><center>REGISTRATION FORM<center></H3>
+<form>
+<label>Name:</label>
+<input type="text" name="name"><br><br>
+
+<label>Password:</label>
+<input type="password" name="password"><br><br>
+
+<label>Mobile number:</label>
+<input type="mobile" name="mobile" ><br><br>
+
+<label>Address:</label>
+<textarea id="address" name="address" row="3"></textarea><br>
+
+<label>Date of birth:</label>
+<input type="date" id="dob" name="dob"><br><br>
+
+<label>Email:</label>
+<input type="email" name="email"><br><br>
+
+<label>Gender:</label>
+<div class="gender-options">
+    <input type="radio" name="gender" value="male" checked required><label>Male</label>
+    <input type="radio" name="gender" value="female"><label>Female</label>
+    <input type="radio" name="gender" value="other"><label>Other</label>
+</div><br><br>
+
+<label for="nationality">Nationality:</label>
+<select id="nationality" name="nationality">
+ <option value="india">Indian</option>
+ <option value="Italy">Pakistani</option>
+ <option value="China">Canadian</option>
+</select> <br><br>
+
+<fieldset>
+<legend>Languages Known</legend>
+    <label><input type="checkbox" name="language" value="english">English</label><br>
+	<label><input type="checkbox" name="language" value="spanish">Spanish</label><br>
+    <label><input type="checkbox" name="language" value="french">French</label><br>
+</fieldset>
+<br>
+
+<input type="Submit" value="Submit">
+<input type="Submit" value="Cancel">
+</form>
+</body>
+</html>
+</html>
