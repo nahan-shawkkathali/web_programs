@@ -8,4 +8,25 @@
 ul li {
     list-style-type: square;
 }
+table {
+	border-collapse: collapse;
+	width: 30%;
+	}
+	th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+	color:blue;
+	}
+	th {
+	background-color: purple;
+	color: white;
+	}
+	tr:nth-child(even) {
+	background-color: #f2f2f2;
+	}
+	tr:hover {
+	background-color: #ddd;
+	}
+
 
