@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Form Validation</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+h3 {
+    text-align: center;
+    color: blue;
+}
+form {
+    width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+}
+label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+}
+</style>
+
+<script>
+function validate() {
+
+    var name = document.getElementById("name").value;
+    var password = document.getElementById("password").value;
+    var cpassword = document.getElementById("cpassword").value;
+    var mobile = document.getElementById("mobile").value;
+
+    if (name == "") {
+        alert("Name cannot be blank");
+        return false;
+    }
+    else if (!isNaN(name)) {
+        alert("Name must contain alphabets only");
+        return false;
+    }
+    else if (password == "") {
+        alert("Enter a password");
+        return false;
+    }
+    else if (password.length < 8) {
+        alert("Password must be at least 8 characters");
+        return false;
+    }
+    else if (cpassword == "") {
+        alert("Please confirm your password");
+        return false;
+    }
+    else if (password != cpassword) {
+        alert("Passwords do not match!");
+        return false;
+    }
+    else if (mobile == "") {
+        alert("Enter your phone number");
+        return false;
+    }
+    else if (isNaN(mobile)) {
+        alert("Invalid phone number");
+        return false;
+    }
+    else if (mobile.length != 10) {
+        alert("Phone number must be 10 digits");
+        return false;
+    }
+
+    alert("Thank you for registration!");
+    return true;
+}
+</script>
+</head>
+
+<body>
+<h3>REGISTRATION FORM</h3>
+
+<form onsubmit="return validate()">
+
+<label>Name</label>
+<input type="text" id="name"><br><br>
+
+<label>Password</label>
+<input type="password" id="password"><br><br>
+
+<label>Confirm Password</label>
+<input type="password" id="cpassword"><br><br>
+
+<label>Phone Number</label>
+<input type="text" id="mobile"><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Cancel">
+
+</form>
+</body>
+</html>
