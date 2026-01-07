@@ -1,0 +1,146 @@
+<html>
+<head>
+<style>
+body{font-family:Arial,sans-serif;}
+h3{color:blue;text-align:center;}
+form{
+width:420px;
+margin:20px auto;
+padding:20px}
+label{
+display:inline-block;
+width:150px;
+vertical-align:top;
+margin-bottom:10px;}
+.gender-options{
+display:inline-flex;
+width:220px;
+align-items:center;
+padding:10px;
+}
+textarea{
+width:220px;
+padding:2px;
+height:20px;
+resize:none;}
+</style>
+<script>
+function validate(){
+var name=document.getElementById("name").value;
+var password=document.getElementById("password").value;
+var cpassword=document.getElementById("cpassword").value;
+var mobile=document.getElementById("mobile").value;
+var address=document.getElementById("address").value;
+var gender=document.querySelector('input[name="gender"]:checked');
+var language=document.querySelectorAll('input[name="lang"]:checked');
+var nationality=document.getElementById("nationality").value;
+if(name==""){
+alert("enter name");
+return false;
+}
+else if(!isNaN(name)){
+alert("name should be alphabet");
+return false;
+}
+else if(password==""){
+alert("enter password");
+return false;
+}
+else if(cpassword==""){
+alert("enter cpassword");
+return false;
+}
+else if(password!=cpassword){
+alert("password don't match");
+return false;
+}
+else if(mobile==""){
+alert("enter mobile");
+return false;
+}
+else if(address==""){
+alert("enter address");
+return false;
+}
+else if(address.length < 5)
+{ 
+alert("address too short"); 
+return false; 
+}
+else if(isNaN(mobile)){
+alert("mobile shpuld be number");
+return false;
+}
+else if(mobile.length!=10){
+alert("mobile length shuld be 10");
+return false;
+}
+else if(!gender)
+{
+alert("select gender");
+return false;
+}
+else if(language.length==0){
+alert("select language");
+return false;
+}
+else if(nationality==""){
+alert("select nationality");
+return false;
+}
+else{
+alert("registration complete");
+return true;
+}
+}
+</script>
+</head>
+<body>
+<form onsubmit="return validate()">
+<label>Name:</label>
+<input type="text" id="name"><br><br>
+<label>Password:</label>
+<input type="password" id="password"><br><br>
+<label>confirm Password:</label>
+<input type="password" id="cpassword"><br><br>
+<label>mobile:</label>
+<input type="text" id="mobile"><br><br>
+<label>address:</label>
+<textarea id="address" name="address" row="3"></textarea><br><br>
+<label>gender</label>
+<div class="gender-options">
+<input type="radio" name="gender" value="female">
+<label>female</label>
+<input type="radio" name="gender" value="male" >
+<label>male</label>
+<input type="radio" name="gender" value="other">
+<label>other</label>
+</div><br><br>
+<label>Nationality:</label>
+<select id="nationality" name="nationality">
+<option value="india">India</option>
+<option value="pakistan">pakistan</option>
+<option value="italy">italy</option>
+</select><br><br>
+<fieldset>
+<legend>languages known</legend>
+<label><input type="checkbox" name="lang" value="english">English</label><br>
+<label><input type="checkbox" name="lang" value="malayalam">malayalam</label><br>
+<label><input type="checkbox" name="lang" value="french">french</label><br>
+</fieldset>
+<input type="submit" value="submit" style="background-color:green;color:white">
+<input type="reset" value="cancel" style="background-color:red;color:white">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
